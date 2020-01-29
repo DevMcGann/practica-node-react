@@ -45,7 +45,8 @@ exports.nuevoProducto = async (req,res,next) => {
         res.json({mensaje:"Producto agregado"})
     } catch (error) {
         console.log(error);
-        nect();
+        res.json({mensaje:"Error en controlador de Productos - Metodo Nuevo Producto. "})
+        next();
     }
 }
 

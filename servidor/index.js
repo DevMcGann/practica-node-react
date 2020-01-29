@@ -7,7 +7,8 @@ const cors = require('cors');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/pruebaApi', {
-    useNewUrlParser:true
+    useNewUrlParser:true,
+    useUnifiedTopology: true
 });
 
 const app = express();

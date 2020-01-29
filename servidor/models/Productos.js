@@ -6,7 +6,7 @@ const productosSchema = new Schema({
         type:String,
     },
     precio:{
-        type:Number
+        type:String
     },
     desc:{
         type:String

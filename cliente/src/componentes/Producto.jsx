@@ -24,7 +24,7 @@ const Producto = ({producto}) => {
                 <h1>{nombre}</h1>
                 <h2>{desc}</h2>
                 <p>{precio}</p>
-                <a href="#" onClick={eliminarProducto(_id)}>Eliminar</a>
+                {/*<a href="#" onClick={eliminarProducto(_id)}>Eliminar</a>*/}
             </div>
         </article>
      );

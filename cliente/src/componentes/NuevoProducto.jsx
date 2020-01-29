@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import clientaAxios from '../axios'
 import clienteAxios from '../axios'
 
 const NuevoProducto = () => {
@@ -14,7 +13,7 @@ const NuevoProducto = () => {
 
 
     const agregarProducto = async e=> {
-        e.PreventDefault();
+        e.preventDefault();
 
         const fd = new FormData();
 
@@ -45,7 +44,7 @@ const NuevoProducto = () => {
 
     //imagen
     const leerArchivo = e => {
-        setImagen(e.targe.files[0]);
+        setImagen(e.target.files[0]);
     }
 
 
@@ -77,7 +76,7 @@ const NuevoProducto = () => {
                     <input type="file"  name="imagen" onChange={leerArchivo}/>
                 </div>
 
-                <input type="submit" class="boton" velue="Agregar Producto"/>
+                <input type="submit" className="boton" velue="Agregar Producto"/>
 
             </form>
         </div>
