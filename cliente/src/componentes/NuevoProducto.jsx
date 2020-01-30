@@ -76,7 +76,7 @@ const NuevoProducto = () => {
                     <input type="file"  name="imagen" onChange={leerArchivo}/>
                 </div>
 
-                <input type="submit" className="boton" velue="Agregar Producto"/>
+                <input type="submit" className="boton" value="Agregar Producto"/>
 
             </form>
         </div>

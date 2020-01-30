@@ -5,15 +5,58 @@
   box-sizing: border-box;
 }
 
+/* navbar  */
+.header{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+}
+.header h3{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header h3:hover{
+  cursor: pointer;
+  color:green;
+}
+
 /*  Formulario  */
 .nuevo{
   background-color: coral;
+  text-align: center;
 }
 
 .nuevo .formulario{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align:center;
+}
+
+.campo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin-bottom: 20px;
+  grid-gap: 8px;
+}
+.campo input{
+  height: 45px;
+  width:250px;
+  text-align: center;
+}
+
+.boton{
+  margin-top: 25px;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.boton:hover{
+  color:white;
+  background-color: green;
+  cursor: pointer;
 }
