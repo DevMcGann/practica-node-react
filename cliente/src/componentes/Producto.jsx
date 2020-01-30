@@ -1,18 +1,39 @@
 import React from 'react'
 import clienteAxios from '../axios'
+import Swal from 'sweetalert2'
 
 const Producto = ({producto}) => {
 
     const{_id, nombre, precio, desc, imagen} = producto;
 
+    // elimina un producto
     const eliminarProducto = id => {
-        try {
-            clienteAxios.delete(`/productos/${id}`)
-            alert("Eliminado")
-        } catch (error) {
-            alert("Error al eliminar")
-            console.log(error)
-        }
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "Un producto eliminado no se puede recuperar",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Eliminar',
+            cancelButtonText : 'No, Cancelar'
+        }).then((result) => {
+            if (result.value) {
+              // eliminar en la rest api
+              clienteAxios.delete(`/productos/${id}`)
+                .then(res => {
+                    if(res.status === 200) {
+                        Swal.fire(
+                            'Eliminado',
+                            res.data.mensaje,
+                            'success'
+                        )
+                    }else{
+                        alert("Paso´algo che...")
+                    }
+                })
+            }
+        })
     }
 
     return ( 
@@ -24,8 +45,14 @@ const Producto = ({producto}) => {
                 <h1>{nombre}</h1>
                 <h2>{desc}</h2>
                 <p>$ {precio}</p>
-                {/*<a href="#" onClick={eliminarProducto(_id)}>Eliminar</a>*/}
+                <button 
+                    type="button" 
+                    onClick={() => eliminarProducto(_id) }>
+                    Eliminar
+            </button>
+                
             </div>
+           
         </article>
      );
 }
