@@ -1,5 +1,5 @@
 import React from 'react'
-import clienteAxios from '../axios'
+import clienteAxios from '../../axios'
 import Swal from 'sweetalert2'
 
 const Producto = ({producto}) => {
@@ -35,6 +35,8 @@ const Producto = ({producto}) => {
             }
         })
     }
+
+  
 
     return ( 
         <article className="producto-container">

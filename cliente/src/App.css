@@ -51,6 +51,17 @@ a{
   color:green;
 }
 
+.nav{
+  color:white;
+  background-color: green;
+}
+
+.nav h1{
+  text-align: center;
+  font-size:3rem;
+  font-weight: bolder;
+}
+
 /*  Formulario  */
 .nuevo{
   background-color: coral;
