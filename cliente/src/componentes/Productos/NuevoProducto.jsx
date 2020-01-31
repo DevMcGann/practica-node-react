@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-import clienteAxios from '../axios'
+import clienteAxios from '../../axios'
+import {Link} from 'react-router-dom'
 
 const NuevoProducto = () => {
 
@@ -79,6 +80,9 @@ const NuevoProducto = () => {
                 <input type="submit" className="boton" value="Agregar Producto"/>
 
             </form>
+
+            <Link to={'/'} className="a-boton">Volver a Productos</Link>
+
         </div>
      );
 }

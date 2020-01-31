@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import clienteAxios from '../axios'
+import clienteAxios from '../../axios'
 import Producto from './Producto'
 
 const Productos = () => {

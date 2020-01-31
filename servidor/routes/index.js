@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const productosController = require('../controllers/productosController.js');
+const usuariosController = require('../controllers/usuariosController');
 
 module.exports = function(){
 
@@ -16,8 +17,11 @@ router.put('productos/:idProducto',
     productosController.subirArchivo,
     productosController.actualizarProducto
 );
-router.delete('productos/:idProducto', productosController.eliminarProducto);
+router.delete('/productos/:idProducto', productosController.eliminarProducto);
 router.post('/productos/busqueda/:query', productosController.buscarProducto);
+
+//crear usuario
+router.post('/admin/nuevo', usuariosController.registrarUsuario);
 
 return router;
 

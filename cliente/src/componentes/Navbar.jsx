@@ -1,12 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     return ( 
+        <React.Fragment>
         <header className="header">
-            <h3>Nuevo Producto</h3>
-            <h3>Productos</h3>
-            <h3>Iniciar Sesion</h3>
+            <Link to={'/productos/nuevo'}><h3>Nuevo Producto</h3></Link>
+            <Link to={'/'}><h3>Productos</h3></Link>
+            <Link to={'/'}><h3>Iniciar Sesión (Aun no anda)</h3></Link>
         </header>
+        </React.Fragment>
      );
 }
  
