@@ -11,7 +11,7 @@ mongoose.Promise = global.Promise;
     useNewUrlParser:true,
     useUnifiedTopology: true
 });*/
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect('mongodb+srv://devMcgann:prueba123@pruebaapi-btfhp.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser:true,
     useUnifiedTopology: true
 });
