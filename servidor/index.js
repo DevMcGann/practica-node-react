@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config()
 const routes = require ('./routes/index');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -6,7 +7,11 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/pruebaApi', {
+/*mongoose.connect('mongodb://localhost/pruebaApi', {
+    useNewUrlParser:true,
+    useUnifiedTopology: true
+});*/
+mongoose.connect(process.env.DATABASE, {
     useNewUrlParser:true,
     useUnifiedTopology: true
 });
@@ -21,4 +26,6 @@ app.use('/', routes());
 
 app.use(express.static('uploads'));
 
-app.listen(5000);
+app.listen(5000, ()=>{
+    console.log("Servidor Andando en puerto 3000")
+});
