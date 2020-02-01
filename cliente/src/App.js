@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Link,Route, Switch} from 'react-router-dom';
 import Navbar from './componentes/Navbar.jsx';
 import NuevoProducto from './componentes/Productos/NuevoProducto';
 import Productos from './componentes/Productos/Productos';
+import UsuarioNuevo from './componentes/Usuarios/UsuarioNuevo.jsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
          <Switch>
               <Route exact path="/" component={Productos} />
               <Route exact path="/productos/nuevo" component={NuevoProducto} />
+              <Route exact path="/admin-nuevo" component={UsuarioNuevo} />
          </Switch>
      
       </Router>
