@@ -19,17 +19,13 @@ const UsuarioNuevo = () => {
     const Submit = async e => {
         e.preventDefault();
         
-        const fd = new FormData();
-
-        fd.append('email', nuevoUsuario.email);
-        fd.append('dni', nuevoUsuario.dni);
-        
         try {
-            const res = await clienteAxios.post('/admin/nuevo', fd)
+            const res = await clienteAxios.post('/admin/nuevo', nuevoUsuario)
+            console.log(res)
             alert("Creado");
         } catch (error) {
             console.log(error)
-            alert("Hubo un error agregando producto")
+            alert("Hubo un error agregando Usuario")
         }
 
     }

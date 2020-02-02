@@ -1,0 +1,14 @@
+.login{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo-login{
+    height: 50px;
+    width: 200px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}

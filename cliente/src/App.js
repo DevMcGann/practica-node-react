@@ -5,6 +5,7 @@ import Navbar from './componentes/Navbar.jsx';
 import NuevoProducto from './componentes/Productos/NuevoProducto';
 import Productos from './componentes/Productos/Productos';
 import UsuarioNuevo from './componentes/Usuarios/UsuarioNuevo.jsx'
+import Login from './componentes/Usuarios/Login';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
               <Route exact path="/" component={Productos} />
               <Route exact path="/productos/nuevo" component={NuevoProducto} />
               <Route exact path="/admin-nuevo" component={UsuarioNuevo} />
+              <Route exact path="/admin" component={Login} />
+              
          </Switch>
      
       </Router>
