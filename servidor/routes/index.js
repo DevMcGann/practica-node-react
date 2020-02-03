@@ -22,6 +22,10 @@ router.post('/productos/busqueda/:query', productosController.buscarProducto);
 
 //crear usuario
 router.post('/admin/nuevo', usuariosController.registrarUsuario);
+//iniciar sesion
+router.post('/admin', usuariosController.autenticarUsuario);
+
+
 
 return router;
 
