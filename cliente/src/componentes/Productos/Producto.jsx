@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import clienteAxios from '../../axios'
 import Swal from 'sweetalert2'
+import {CRMContext} from '../../CRMContext'
 
 const Producto = ({producto}) => {
+
+    const[auth,guardarAuth] = useContext(CRMContext)
 
     const{_id, nombre, precio, desc, imagen} = producto;
 
@@ -47,11 +50,14 @@ const Producto = ({producto}) => {
                 <h1>{nombre}</h1>
                 <h2>{desc}</h2>
                 <p>$ {precio}</p>
+                {auth.auth?
                 <button 
                     type="button" 
                     onClick={() => eliminarProducto(_id) }>
                     Eliminar
-            </button>
+                </button>
+                : null}
+                
                 
             </div>
            

@@ -30,6 +30,7 @@ const Login = (props) => {
           props.history.push('/')
 
       } catch (error) {
+        alert(JSON.stringify(credenciales))
           console.log(error);
           Swal.fire({
               type:'error',
@@ -42,7 +43,7 @@ const Login = (props) => {
 
 
   const leerDatos = e => {
-        guardarCredenciales({
+        setCredenciales({
             ...credenciales,
             [e.target.name] : e.target.value
         })
@@ -51,9 +52,9 @@ const Login = (props) => {
 
     return ( 
         <div className="login">
-            <input type="text" className="campo-login" placeholder="Email" required onChange={leerDatos}/>
-            <input type="text" className="campo-login" placeholder="Password" required onChange={leerDatos}/>
-            <input type="submit" className="boton" value="Iniciar Sesión" onSubmit={iniciarSesion}/>
+            <input type="text" className="campo-login" placeholder="Email" name="email" required onChange={leerDatos}/>
+            <input type="text" className="campo-login" placeholder="Password" name="dni" required onChange={leerDatos}/>
+            <input type="button" className="boton" value="Iniciar Sesión" onClick={iniciarSesion}/>
         </div>
      );
 }
