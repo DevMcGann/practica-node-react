@@ -7,7 +7,8 @@ const Navbar = () => {
         <header className="header">
             <Link to={'/productos/nuevo'}><h3>Nuevo Producto</h3></Link>
             <Link to={'/'}><h3>Productos</h3></Link>
-            <Link to={'/'}><h3>Iniciar Sesión (Aun no anda)</h3></Link>
+            <Link to={'/'}><h3>Slider</h3></Link>
+            <Link to={'/'}><h3>Cerrar Sesion</h3></Link>
         </header>
         </React.Fragment>
      );
