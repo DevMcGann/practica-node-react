@@ -1,5 +1,7 @@
 import React from 'react';
+import  './carousel.css'
 const Carousel = require('react-responsive-carousel').Carousel;
+
 
 
 const Slider = () => {
@@ -9,6 +11,7 @@ const Slider = () => {
                 <div>
                     <img src="./Pics/iphones.jpg" />
                     <p className="legend">Iphones</p>
+                    
                 </div>
                 <div>
                     <img src="./Pics/samsungs.jpg" />
