@@ -5,7 +5,7 @@ const Carousel = require('react-responsive-carousel').Carousel;
 const Slider = () => {
     return ( 
  
-         <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
+         <Carousel showArrows={true} >
                 <div>
                     <img src="./Pics/iphones.jpg" />
                     <p className="legend">Iphones</p>
