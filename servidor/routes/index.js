@@ -3,6 +3,7 @@ const router = express.Router();
 
 const productosController = require('../controllers/productosController.js');
 const usuariosController = require('../controllers/usuariosController');
+const sliderController = require('../controllers/sliderController.js');
 
 module.exports = function(){
 
@@ -25,7 +26,10 @@ router.post('/admin/nuevo', usuariosController.registrarUsuario);
 //iniciar sesion
 router.post('/admin', usuariosController.autenticarUsuario);
 
-
+//slider
+router.get('/slider', sliderController.mostrarSliders);
+router.post('/slider', sliderController.subirArchivo,sliderController.nuevoSlider);
+router.delete('/slider/:idSlider', sliderController.eliminarSlider)
 
 return router;
 
