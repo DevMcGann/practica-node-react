@@ -7,6 +7,7 @@ import Productos from './componentes/Productos/Productos';
 import UsuarioNuevo from './componentes/Usuarios/UsuarioNuevo.jsx'
 import Login from './componentes/Usuarios/Login';
 import Carousel from './componentes/Slider/Carousel.js';
+import MySlider from './componentes/Slider/MySlider/MySlider.jsx';
 
 import {CRMContext, CRMProvider} from './CRMContext';
 
@@ -24,7 +25,8 @@ function App() {
                   <h1>Tienda de Celulares</h1>
               </nav>
 
-              <Carousel/>
+              {/*<Carousel/>*/}
+              <MySlider/>
 
               <Switch>
                     <Route exact path="/" component={Productos} />
