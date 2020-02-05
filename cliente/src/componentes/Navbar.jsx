@@ -18,8 +18,9 @@ const Navbar = () => {
         <header className="header">
             <Link to={'/'}><h3>Home</h3></Link>
             <Link to={'/productos/nuevo'}><h3>Nuevo Producto</h3></Link>
-            <Link to={'/'}><h3>Slider</h3></Link>
+            <Link to={'/slider'}><h3>Slider</h3></Link>
             <Link to={'/'}><h3>Cerrar Sesion</h3></Link>
+          
         </header>
         </React.Fragment>
      );
