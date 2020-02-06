@@ -27,7 +27,29 @@ a{
 
 
 
+/*Navbar Publica*/
+.nav-publica{
+  margin-bottom: 30px;
+  background-color:green;
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
+.logo{
+  height:50%;
+  width: 50%;
+  flex:.5
+}
+
+.navegacion{
+  flex:1;
+  color:white;
+  font-size: 2rem;
+  display:flex;
+  justify-content: space-evenly;
+}
 
 
 

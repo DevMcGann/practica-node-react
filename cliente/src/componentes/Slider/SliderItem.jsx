@@ -46,10 +46,12 @@ const SliderItem = ({slider}) => {
                 <h1 id="titulo-slider"><span>{titulo}</span></h1>
                 <h2 id="desc-slider"><span>{desc}</span></h2>
                 {auth.auth?
-                <button 
+                <button
+                    id="eliminar"
                     type="button" 
                     onClick={() => eliminarSlider(_id) }>
                     Eliminar
+                    
                 </button>
                 : null}
                 

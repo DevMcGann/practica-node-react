@@ -1,3 +1,5 @@
+/*Buscar la forma de proteger este EndPoint, ya sea por IP o algo*/
+
 import React,{useState} from 'react';
 import clienteAxios from '../../axios';
 import './UsuarioNuevo.css'
@@ -21,7 +23,6 @@ const UsuarioNuevo = () => {
         
         try {
             const res = await clienteAxios.post('/admin/nuevo', nuevoUsuario)
-            console.log(res)
             alert("Creado");
         } catch (error) {
             console.log(error)

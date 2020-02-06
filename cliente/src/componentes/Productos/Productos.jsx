@@ -20,7 +20,7 @@ const Productos = () => {
     },[productos])
 
     return ( 
-        <section className="productos-container">
+        <section className="productos-container" id="productos">
             <h2>Productos</h2>
 
             <div className="lista-productos">

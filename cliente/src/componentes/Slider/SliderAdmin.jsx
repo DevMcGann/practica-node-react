@@ -1,12 +1,14 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect, useContext} from 'react';
 import clienteAxios from '../../axios';
 import NuevoSlider from './NuevoSlider';
 import SliderItem from './SliderItem.jsx';
 import './slideradmin.scss'
+import {CRMContext} from '../../CRMContext'
 
 
 const SliderAdmin = () => {
 
+     const[auth, guardarAuth] = useContext(CRMContext);
       const [slider, setSlider] = useState([])
     
         useEffect(()=>{
@@ -23,7 +25,7 @@ const SliderAdmin = () => {
     },[slider])
 
 
-
+    if(!auth.auth) return null;
 
     return (
         <React.Fragment>
