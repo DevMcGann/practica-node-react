@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import clienteAxios from '../../axios'
 import Swal from 'sweetalert2'
 import {CRMContext} from '../../CRMContext'
+import './sliderItem.scss'
 
 const SliderItem = ({slider}) => {
 
@@ -40,14 +41,10 @@ const SliderItem = ({slider}) => {
     }
 
     return ( 
-        <article className="slider-container">
-            <div className="imagen">
-                <img src={`http://localhost:5000/${imagen}`} alt={_id}/>
-            </div>
-            <div className="texto">
-                <h1>{nombre}</h1>
-                <h2>{desc}</h2>
-                <p>$ {precio}</p>
+        <article id="slider-container">
+                <img src={`http://localhost:5000/${imagen}`} alt={_id} id="img-slider"/>
+                <h1 id="titulo-slider"><span>{titulo}</span></h1>
+                <h2 id="desc-slider"><span>{desc}</span></h2>
                 {auth.auth?
                 <button 
                     type="button" 
@@ -57,8 +54,7 @@ const SliderItem = ({slider}) => {
                 : null}
                 
                 
-            </div>
-           
+            
         </article>
      );
 }

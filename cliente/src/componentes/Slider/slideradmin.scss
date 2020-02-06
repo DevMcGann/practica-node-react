@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.galeria-slider{
+    max-height: 800px;
+    max-width: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-rows: auto;
+    grid-gap: 5px;
+    padding:10px;
+}
+
+.galeria-slider img{
+    height: 450px;
+    min-width: 450px;
+}

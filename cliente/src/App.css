@@ -66,6 +66,7 @@ a{
 .nuevo{
   background-color: coral;
   text-align: center;
+  width: 100%;
 }
 
 .nuevo .formulario{
@@ -88,10 +89,16 @@ a{
   text-align: center;
 }
 
+.label-imagen{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .boton{
   margin-top: 25px;
   margin-bottom: 20px;
-  height: 50px;
+  height: 60px;
+  width: 280px;
 }
 
 .boton:hover{

@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import clienteAxios from '../../axios'
 import SliderItem from './SliderItem'
+import './slider.scss'
 
 
 const Slider = () => {
@@ -8,11 +9,11 @@ const Slider = () => {
     const [x,setX] = useState(0);
 
     const goLeft = () => {
-       x === 0 ? setX(-100 * (arr.length -1)) : setX(x+100); 
+       x === 0 ? setX(-100 * (slider.length -1)) : setX(x+100); 
     }
 
     const goRight = () => {
-        x === -100 *(arr.length -1) ? setX(0) : setX(x - 100);
+        x === -100 *(slider.length -1) ? setX(0) : setX(x - 100);
     }
 
     useEffect(()=>{

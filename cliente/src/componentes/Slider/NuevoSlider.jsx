@@ -69,7 +69,7 @@ const NuevoSlider = () => {
                 </div>
 
                 <div className="campo">
-                    <label>Imagen</label>
+                    <label className="label-imagen">Imagen</label>
                     <input type="file"  name="imagen" onChange={leerArchivo}/>
                 </div>
 

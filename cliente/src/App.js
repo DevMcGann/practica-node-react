@@ -10,6 +10,8 @@ import Login from './componentes/Usuarios/Login';
 
 import {CRMContext, CRMProvider} from './CRMContext';
 import SliderAdmin from './componentes/Slider/SliderAdmin';
+import Slider from './componentes/Slider/Slider.jsx';
+
 
 function App() {
 
@@ -25,6 +27,7 @@ function App() {
                   <h1>Tienda de Celulares</h1>
               </nav>
 
+              <Slider/>
 
               <Switch>
                     <Route exact path="/" component={Productos} />
