@@ -8,9 +8,9 @@ const Slider = () => {
     const [slider, setSlider] = useState([])
     const [x,setX] = useState(0);
 
-    const goLeft = () => {
+   /* const goLeft = () => {
        x === 0 ? setX(-100 * (slider.length -1)) : setX(x+100); 
-    }
+    }*/
 
     const goRight = () => {
         x === -100 *(slider.length -1) ? setX(0) : setX(x - 100);
@@ -30,20 +30,18 @@ const Slider = () => {
         function temporizador() {
             setTimeout(function(){ 
                 goRight(); 
-            }, 3000);
+            }, 6000);
         }
 
-        temporizador()
-
-
+        temporizador();
         consultarApi();
-    },[slider,x])
+    },[x]);
 
     return ( 
         <div className="slider">
         {slider.map((sli)=>{
             return(
-                <div className="slide" style={{transform:`translateX(${x}%)`}}>
+                <div className="slide"  key={sli._id} style={{transform:`translateX(${x}%)`}}>
                    <SliderItem 
                         key={sli._id}
                         slider={sli}
@@ -51,8 +49,8 @@ const Slider = () => {
                 </div>
             )
         })}
-        <button id="goLeft" onClick={goLeft}><i className="fas fa-chevron-left"></i></button>
-        <button id="goRight" onClick={goRight}><i className="fas fa-chevron-right"></i></button>
+        {/*<button id="goLeft" onClick={goLeft}><i className="fas fa-chevron-left"></i></button>*/}
+        {/*<button id="goRight" onClick={goRight}><i className="fas fa-chevron-right"></i></button>*/}
     </div>
      );
 }

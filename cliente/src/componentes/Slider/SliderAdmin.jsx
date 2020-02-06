@@ -36,7 +36,7 @@ const SliderAdmin = () => {
             <div className="galeria-slider">
                 {slider.map((sli)=>{
                     return(
-                        <div className="slide">
+                        <div className="slide" key={sli._id}>
                         <SliderItem 
                                 key={sli._id}
                                 slider={sli}

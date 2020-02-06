@@ -27,8 +27,9 @@ function App() {
               <Navbar/>
               <NavbarPublica/>
               
-
+              <div className="contenedor-slider-general">
               <Slider/>
+              </div>
 
               <Switch>
                     <Route exact path="/" component={Productos} />

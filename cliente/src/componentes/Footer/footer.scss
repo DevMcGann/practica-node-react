@@ -13,9 +13,15 @@
     }
 }
 
-h1{
+.footer h1{
     font-size: 2rem;
-    margin-top: 30px;
+    margin-top: 50px;
+    padding:5px;
+    height: 50px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid white;
 }
 .contacto{
     display:grid;
@@ -23,6 +29,7 @@ h1{
     grid-auto-rows: auto;
     justify-content: center;
     align-items: center;
+   
 }
 
 .redes{
