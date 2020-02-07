@@ -57,8 +57,6 @@ const Usado = ({usado}) => {
                     Eliminar
                 </button>
                 : null}
-                
-                
             </div>
            
         </article>
