@@ -1,0 +1,48 @@
+.footer{
+    margin-top: 25px;
+    height:20vh;
+    width: 100%;
+    background-color: green;
+    color:white;
+
+}
+
+@media(max-width:900px){
+    .footer{
+        height: 60vh;
+    }
+}
+
+.footer h1{
+    font-size: 2rem;
+    margin-top: 50px;
+    padding:5px;
+    height: 50px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid white;
+}
+.contacto{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    &:hover{
+        cursor: pointer;
+    }
+    i{
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+}

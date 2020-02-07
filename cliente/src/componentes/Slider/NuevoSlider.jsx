@@ -1,9 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import clienteAxios from '../../axios'
+import {CRMContext} from '../../CRMContext'
 
 const NuevoSlider = () => {
 
-
+    const[auth, guardarAuth] = useContext(CRMContext);
     const[slider, setSlider]=useState({
         titulo:'',
         desc:''
@@ -48,7 +49,7 @@ const NuevoSlider = () => {
 
 
 
-
+    if(!auth.auth) return null;
 
 
     return ( 

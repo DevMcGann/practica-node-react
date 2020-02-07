@@ -11,6 +11,8 @@ import Login from './componentes/Usuarios/Login';
 import {CRMContext, CRMProvider} from './CRMContext';
 import SliderAdmin from './componentes/Slider/SliderAdmin';
 import Slider from './componentes/Slider/Slider.jsx';
+import Footer from './componentes/Footer/Footer';
+import NavbarPublica from './componentes/NavbarPublica';
 
 
 function App() {
@@ -23,11 +25,11 @@ function App() {
         <CRMProvider value={[auth,guardarAuth]} >
 
               <Navbar/>
-              <nav className="nav">
-                  <h1>Tienda de Celulares</h1>
-              </nav>
-
+              <NavbarPublica/>
+              
+              <div className="contenedor-slider-general">
               <Slider/>
+              </div>
 
               <Switch>
                     <Route exact path="/" component={Productos} />
@@ -37,6 +39,8 @@ function App() {
                     <Route exact path="/slider" component={SliderAdmin} />
                     
               </Switch>
+
+              <Footer/>
               
         </CRMProvider>
       </Router>
