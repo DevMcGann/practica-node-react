@@ -35,7 +35,7 @@ router.delete('/slider/:idSlider', sliderController.eliminarSlider);
 //usados
 router.get('/usados', usadosController.mostrarUsados);
 router.post('/usados', usadosController.subirArchivo,usadosController.nuevoUsado);
-router.delete('/usados/:idUsado', usadoController.eliminarUsado);
+router.delete('/usados/:idUsado', usadosController.eliminarUsado);
 
 return router;
 

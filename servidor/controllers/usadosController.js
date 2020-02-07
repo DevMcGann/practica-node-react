@@ -61,17 +61,28 @@ exports.mostrarUsados = async (req,res,next) => {
     }
 }
 
-
-exports.mostrarUsados = async (req,res,next) => {
-    const usados = await Usados.findById(req.params.idUsado);
-    if(!usado){
-        res.json({mensaje:"Ese Usado no existe"});
-        return next();
+exports.eliminarUsado = async (req,res,next) => {
+    try {
+        await Usados.findOneAndDelete({_id: req.params.idUsado});
+        res.json({mensaje:"Producto Eliminado"})
+    } catch (error) {
+        console.log(error);
+        next();
     }
-    res.json(usado);
 }
 
 
+/*
+exports.mostrarUsado = async (req,res,next) => {
+    const usados = await Usados.findById(req.params.idUsado);
+    if(!usados){
+        res.json({mensaje:"Ese Usado no existe"});
+        return next();
+    }
+    res.json(usados);
+}
+
+*/
 /*exports.actualizarProducto=async(req,res,next) => {
     try {
         let productoAnterior = await Productos.findById(req.params.idProducto);
@@ -92,17 +103,8 @@ exports.mostrarUsados = async (req,res,next) => {
 
 */
 
-exports.eliminarUsado = async (req,res,next) => {
-    try {
-        await Usados.findOneAndDelete({_id: req.params.idUsado});
-        res.json({mensaje:"Producto Eliminado"})
-    } catch (error) {
-        console.log(error);
-        next();
-    }
-}
 
-
+/*
 exports.buscarUsado = async (req,res,next) => {
     try {
         const {query} = req.params;
@@ -113,3 +115,4 @@ exports.buscarUsado = async (req,res,next) => {
         next();
     }
 }
+*/

@@ -13,6 +13,9 @@ import SliderAdmin from './componentes/Slider/SliderAdmin';
 import Slider from './componentes/Slider/Slider.jsx';
 import Footer from './componentes/Footer/Footer';
 import NavbarPublica from './componentes/NavbarPublica';
+import NuevoUsado from './componentes/Usados/NuevoUsado.jsx'
+import Usados from './componentes/Usados/Usados.jsx'
+import Pagina from './Pagina.js';
 
 
 function App() {
@@ -25,23 +28,14 @@ function App() {
         <CRMProvider value={[auth,guardarAuth]} >
 
               <Navbar/>
-              <NavbarPublica/>
-              
-              <div className="contenedor-slider-general">
-              <Slider/>
-              </div>
-
               <Switch>
-                    <Route exact path="/" component={Productos} />
+                    <Route exact path="/" component={Pagina} />
                     <Route exact path="/productos/nuevo" component={NuevoProducto} />
+                    <Route exact path="/usados/nuevo" component={NuevoUsado} />
                     <Route exact path="/admin-nuevo" component={UsuarioNuevo} />
                     <Route exact path="/admin" component={Login} />
                     <Route exact path="/slider" component={SliderAdmin} />
-                    
               </Switch>
-
-              <Footer/>
-              
         </CRMProvider>
       </Router>
        
