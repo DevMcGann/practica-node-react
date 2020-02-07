@@ -4,6 +4,7 @@ const router = express.Router();
 const productosController = require('../controllers/productosController.js');
 const usuariosController = require('../controllers/usuariosController');
 const sliderController = require('../controllers/sliderController.js');
+const usadosController = require('../controllers/usadosController.js');
 
 module.exports = function(){
 
@@ -29,7 +30,12 @@ router.post('/admin', usuariosController.autenticarUsuario);
 //slider
 router.get('/slider', sliderController.mostrarSliders);
 router.post('/slider', sliderController.subirArchivo,sliderController.nuevoSlider);
-router.delete('/slider/:idSlider', sliderController.eliminarSlider)
+router.delete('/slider/:idSlider', sliderController.eliminarSlider);
+
+//usados
+router.get('/usados', usadosController.mostrarUsados);
+router.post('/usados', usadosController.subirArchivo,usadosController.nuevoUsado);
+router.delete('/usados/:idUsado', usadoController.eliminarUsado);
 
 return router;
 
