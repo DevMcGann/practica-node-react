@@ -3,6 +3,7 @@ const Productos = require('../models/Productos.js');
 //subir imagen
 const multer = require('multer');
 const shortid = require('shortid');
+const gm = require('gm');
 
 const configuracionMulter = {
     storage: fileStorage = multer.diskStorage({
