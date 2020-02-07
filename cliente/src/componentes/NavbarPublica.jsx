@@ -13,6 +13,7 @@ const NavbarPublica = (props) => {
             </div>
             <div className="navegacion">
                 <a href="#productos">Productos</a>
+                <a href="#usados">Usados</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </div>

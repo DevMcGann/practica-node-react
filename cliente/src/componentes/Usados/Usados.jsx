@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import clienteAxios from '../../axios'
 import Usado from './Usado'
+import './usados.scss'
 
 const Usados = () => {
 
@@ -27,12 +28,12 @@ const Usados = () => {
     
     return ( 
         
-        <section className="productos-container" id="productos">
+        <section className="productos-usados-container" id="usados">
             {usados ?
             <React.Fragment> 
-            <h2>Productos Usados</h2>
+            <h2 className="titulo-usados">Productos Usados</h2>
 
-            <div className="lista-productos">
+            <div className="lista-productos-usados">
                 {usados.map((usado)=>(
                     <Usado 
                         key={usado._id}

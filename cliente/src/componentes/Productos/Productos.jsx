@@ -21,7 +21,7 @@ const Productos = () => {
 
     return ( 
         <section className="productos-container" id="productos">
-            <h2>Productos</h2>
+            <h2 className="titulo-productos">Productos</h2>
 
             <div className="lista-productos">
                 {productos.map((producto)=>(

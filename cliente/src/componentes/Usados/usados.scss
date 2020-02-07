@@ -1,0 +1,56 @@
+.productos-usados-container{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; justify-content: center;
+
+    .titulo-usados{
+        margin-top: 50px;
+        margin-bottom: 85px;
+        font-size: 2.5rem;
+        font-weight: bolder;
+        background-color: green;
+        height: 100px;
+        width: 80%;
+        text-align: center;
+        display: flex;
+        justify-content: center; align-items: center;
+        color:white;
+    }
+
+}
+
+.lista-productos-usados{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 18px;
+    align-items: center;justify-content: center;
+}
+
+/* producto individual*/
+
+.producto-usado-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+
+
+    .imagen-usado{
+        width: 100%;
+        height: 100%;
+    }
+
+    .texto-usado{
+        display: flex;
+        flex-direction: column;
+        align-items: center; justify-content: center;
+        background:black;
+        color:white;
+
+        p{
+            font-size: 2rem;
+            color:green;
+            font-weight: bold;
+        }
+    }
+}

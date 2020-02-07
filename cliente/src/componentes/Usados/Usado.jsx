@@ -42,11 +42,11 @@ const Usado = ({usado}) => {
   
 
     return ( 
-        <article className="producto-container">
-            <div className="imagen">
+        <article className="producto-usado-container">
+            <div className="imagen-usado">
                 <img src={`http://localhost:5000/usados/${imagen}`} alt={_id}/>
             </div>
-            <div className="texto">
+            <div className="texto-usado">
                 <h1>{nombre}</h1>
                 <h2>{desc}</h2>
                 <p>$ {precio}</p>
