@@ -53,6 +53,16 @@
  }
 
 
+#eliminar{
+    z-index: 999;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 25px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
  @media (max-width:700px){
     #desc-slider span{
         font-size: 1rem;

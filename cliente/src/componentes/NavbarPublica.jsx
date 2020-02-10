@@ -7,7 +7,7 @@ const NavbarPublica = (props) => {
 
 
     return ( 
-        <div className="nav-publica">
+        <div className="nav-publica ">
             <div className="logo" >
                 <Link to='/'><img src={logo} alt="lgo"/></Link>
             </div>

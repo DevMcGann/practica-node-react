@@ -25,6 +25,13 @@ a{
   margin:2px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 
 
 /*Navbar Publica*/
@@ -35,12 +42,13 @@ a{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  
 }
 
 @media(max-width:780px){
   .nav-publica{
     flex-direction: column;
-    height: 58vh;
+    height: 45vh;
   }
   .navegacion{
     flex-direction: column;

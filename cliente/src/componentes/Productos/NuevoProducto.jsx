@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import clienteAxios from '../../axios'
-import {Link} from 'react-router-dom'
 
 const NuevoProducto = () => {
 
@@ -73,7 +72,7 @@ const NuevoProducto = () => {
                 </div>
 
                 <div className="campo">
-                    <label>Imagen</label>
+                    <label>Imagen (Es recomendable subir imágenes del mismo tamaño)</label>
                     <input type="file"  name="imagen" onChange={leerArchivo}/>
                 </div>
 
@@ -81,7 +80,6 @@ const NuevoProducto = () => {
 
             </form>
 
-            <Link to={'/'} className="a-boton">Volver a Productos</Link>
 
         </div>
      );
