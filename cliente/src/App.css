@@ -223,7 +223,11 @@ a{
   text-align: center;
   border-radius:50%;
 }
-
+#eliminar_boton{
+  size: 200px;
+  padding:20px;
+  z-index: 9999;
+}
 
 /*productos */
 .productos-container{

@@ -9,6 +9,7 @@ import {CRMContext} from '../../CRMContext.js'
 const Login = (props) => {
 
     const [auth, guardarAuth] = useContext(CRMContext); 
+    console.log(auth)
     const [credenciales, setCredenciales] = useState({}); /*Formulario login*/
 
   const iniciarSesion = async e => {
@@ -17,6 +18,7 @@ const Login = (props) => {
           const respuesta = await clienteAxios.post('/admin', credenciales);
           const {token} = respuesta.data;
           localStorage.setItem('token', token);
+          
           guardarAuth({
               token,
               auth:true

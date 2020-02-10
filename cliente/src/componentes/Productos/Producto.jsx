@@ -39,7 +39,10 @@ const Producto = ({producto}) => {
         })
     }
 
-  
+  //if(!auth.auth && (localStorage.getItem('token') === auth.token ) ) {
+  //      return
+  //  }
+
 
     return ( 
         <article className="producto-container">
@@ -50,14 +53,16 @@ const Producto = ({producto}) => {
                 <h1>{nombre}</h1>
                 <h2>{desc}</h2>
                 <p>$ {precio}</p>
-                {auth.auth?
-                <button 
-                    type="button" 
-                    onClick={() => eliminarProducto(_id) }>
-                    Eliminar
-                </button>
-                : null}
-                
+                { auth.auth ? (
+                        <button 
+                            type="button" 
+                            id="eliminar_boton"
+                            onClick={() => eliminarProducto(_id) }>
+                            Eliminar
+                        </button>
+                )
+                : null
+                }
                 
             </div>
            
