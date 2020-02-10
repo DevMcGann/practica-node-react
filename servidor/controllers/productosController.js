@@ -3,7 +3,8 @@ const Productos = require('../models/Productos.js');
 //subir imagen
 const multer = require('multer');
 const shortid = require('shortid');
-const gm = require('gm');
+const gm = require('gm').subClass({imageMagick: true});
+
 
 const configuracionMulter = {
     storage: fileStorage = multer.diskStorage({
@@ -26,8 +27,17 @@ const configuracionMulter = {
 // pasar la configuración y el campo
 const upload = multer(configuracionMulter).single('imagen');
 
+
 exports.subirArchivo = (req,res,next)=> {
     upload(req,res, function(error){
+         gm(req.file.path)
+         .resize(400, 400)
+        .noProfile()
+        .gravity('Center')
+        .extent()
+        .write('./public/uploads/' + req.file.fieldname + '-' + Date.now() , function(err){
+        if(!err) console.log('done');
+  });
         if(error){
             res.json({mensaje:"error"})
         }
