@@ -17,6 +17,11 @@ import NuevoUsado from './componentes/Usados/NuevoUsado.jsx'
 import Usados from './componentes/Usados/Usados.jsx'
 import Pagina from './Pagina.js';
 
+/*
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
 
 function App() {
 
