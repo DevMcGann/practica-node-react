@@ -1,10 +1,16 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import clienteAxios from '../../axios'
 import Producto from './Producto'
+import {CRMContext} from '../../CRMContext'
+
+
 
 const Productos = () => {
 
     const [productos, setProductos] = useState([])
+
+     const [auth, guardarAuth] = useContext(CRMContext); 
+   
 
     useEffect(()=>{
         const consultarApi = async () => {
@@ -17,7 +23,7 @@ const Productos = () => {
             }
         }
         consultarApi();
-    },[productos])
+    },[/*productos*/])
 
     return ( 
         <section className="productos-container" id="productos">

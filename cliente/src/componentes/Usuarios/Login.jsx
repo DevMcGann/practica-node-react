@@ -9,7 +9,7 @@ import {CRMContext} from '../../CRMContext.js'
 const Login = (props) => {
 
     const [auth, guardarAuth] = useContext(CRMContext); 
-    console.log(auth)
+    console.log('desde login ',auth)
     const [credenciales, setCredenciales] = useState({}); /*Formulario login*/
 
   const iniciarSesion = async e => {
@@ -20,9 +20,11 @@ const Login = (props) => {
           localStorage.setItem('token', token);
           
           guardarAuth({
-              token,
-              auth:true
-          });
+                token, 
+                auth: true
+            });
+
+
           Swal.fire(
               'Login Correcto',
               'Has iniciado Sesión',

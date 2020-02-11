@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <CRMProvider value={[auth,guardarAuth]} >
+        <CRMProvider value={[ auth, guardarAuth ]}>
 
               <Navbar/>
               <Switch>

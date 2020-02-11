@@ -5,10 +5,12 @@ import {CRMContext} from '../../CRMContext'
 
 const Producto = ({producto}) => {
 
-    const[auth,guardarAuth] = useContext(CRMContext)
-
+    const[auth, guardarAuth] = useContext(CRMContext); 
+    console.log("desde producto tenemos: ", auth)
+    
     const{_id, nombre, precio, desc, imagen} = producto;
 
+    
     // elimina un producto
     const eliminarProducto = id => {
         Swal.fire({
@@ -45,6 +47,7 @@ const Producto = ({producto}) => {
 
 
     return ( 
+        
         <article className="producto-container">
             <div className="imagen">
                 <img src={`http://localhost:5000/${imagen}`} alt={_id}/>
@@ -53,24 +56,17 @@ const Producto = ({producto}) => {
                 <h1>{nombre}</h1>
                 <h2>{desc}</h2>
                 <p>$ {precio}</p>
-                { auth.auth ? (
-                        <button 
+                {auth.auth ? 
+                (
+                         <button 
                             type="button" 
                             id="eliminar_boton"
                             onClick={() => eliminarProducto(_id) }>
                             Eliminar
                         </button>
                 )
-                : null
+                :null
                 }
-
-                <button 
-                            type="button" 
-                            id="eliminar_boton"
-                            onClick={() => eliminarProducto(_id) }>
-                            Eliminar
-                        </button>
-                
             </div>
            
         </article>
