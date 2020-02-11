@@ -15,6 +15,10 @@ const Pagina = () => {
     return ( 
         <React.Fragment>
             <NavbarPublica/>
+            <div className="presentacion">
+                <p>Bienvenidos a este ejemplo de Landing page Autoadministrable</p>
+                <p>Front: React - Back: Node - DB: MongoDB</p>
+            </div>
             <div className="contenedor-slider-general">
                 <Slider/>
             </div>

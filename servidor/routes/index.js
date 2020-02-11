@@ -11,7 +11,6 @@ const auth = require('../middleware/auth.js');
 module.exports = function(){
 
 router.post('/productos',
-    auth,
     productosController.subirArchivo,
     productosController.nuevoProducto
 );
@@ -33,12 +32,12 @@ router.post('/admin', usuariosController.autenticarUsuario);
 
 //slider
 router.get('/slider', sliderController.mostrarSliders);
-router.post('/slider', auth,sliderController.subirArchivo,sliderController.nuevoSlider);
+router.post('/slider',sliderController.subirArchivo,sliderController.nuevoSlider);
 router.delete('/slider/:idSlider',auth, sliderController.eliminarSlider);
 
 //usados
 router.get('/usados', usadosController.mostrarUsados);
-router.post('/usados', auth,usadosController.subirArchivo,usadosController.nuevoUsado);
+router.post('/usados',usadosController.subirArchivo,usadosController.nuevoUsado);
 router.delete('/usados/:idUsado',auth, usadosController.eliminarUsado);
 
 return router;

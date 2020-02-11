@@ -76,6 +76,13 @@ a{
 }
 
 
+/*PRESENTACIOn*/
+.presentacion{
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  background-color: cornflowerblue;
+}
 
 
 /* navbar  */

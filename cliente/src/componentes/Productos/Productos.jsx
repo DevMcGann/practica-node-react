@@ -23,7 +23,7 @@ const Productos = () => {
             }
         }
         consultarApi();
-    },[/*productos*/])
+    },[productos])
 
     return ( 
         <section className="productos-container" id="productos">
