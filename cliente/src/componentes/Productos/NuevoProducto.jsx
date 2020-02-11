@@ -1,7 +1,12 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import clienteAxios from '../../axios'
+import {CRMContext} from '../../CRMContext'
+
 
 const NuevoProducto = () => {
+
+    const[auth,guardarAuth] = useContext(CRMContext)
+
 
     const[producto, setProducto]=useState({
         nombre:'',
@@ -48,7 +53,10 @@ const NuevoProducto = () => {
     }
 
 
-
+    
+  if(!auth.auth && (localStorage.getItem('token') === auth.token ) ) {
+        return null
+    }
 
     return ( 
         <div className="nuevo">

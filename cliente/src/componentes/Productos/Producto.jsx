@@ -40,7 +40,7 @@ const Producto = ({producto}) => {
     }
 
   //if(!auth.auth && (localStorage.getItem('token') === auth.token ) ) {
-  //      return
+  //      return null
   //  }
 
 
@@ -63,6 +63,13 @@ const Producto = ({producto}) => {
                 )
                 : null
                 }
+
+                <button 
+                            type="button" 
+                            id="eliminar_boton"
+                            onClick={() => eliminarProducto(_id) }>
+                            Eliminar
+                        </button>
                 
             </div>
            
