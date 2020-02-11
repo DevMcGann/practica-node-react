@@ -3,6 +3,7 @@ const Slider = require('../models/Slider.js');
 //subir imagen
 const multer = require('multer');
 const shortid = require('shortid');
+const fs = require('fs');
 
 const configuracionMulter = {
     storage: fileStorage = multer.diskStorage({
@@ -64,7 +65,16 @@ exports.mostrarSliders = async (req,res,next) => {
 
 
 exports.eliminarSlider = async (req,res,next) => {
+
     try {
+        
+        const producto = await Productos.findById({_id:req.params.idProducto})
+        fs.unlink(__dirname + '../../uploads/' + producto.imagen, function (err) {
+        if (err) throw err;
+        // if no error, file has been deleted successfully
+        console.log('File deleted!');
+        });
+
         await Slider.findOneAndDelete({_id: req.params.idSlider});
         res.json({mensaje:"Slider Eliminado"})
     } catch (error) {
