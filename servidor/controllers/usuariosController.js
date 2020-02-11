@@ -38,7 +38,7 @@ exports.autenticarUsuario = async (req,res,next) => {
                     dni:usuario.dni,
                     id:usuario._id
                 },
-                'LLAVESECRETA',  /* ESTO DEBE IR EN ENV */
+                'LLAVESECRETA',  
                 {
                     expiresIn:'2h'
                 }

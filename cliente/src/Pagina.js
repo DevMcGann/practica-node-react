@@ -1,5 +1,5 @@
-import React,{useContext} from 'react';
-import {CRMContext, CRMProvider} from './CRMContext';
+import React from 'react';
+//import {CRMContext, CRMProvider} from './CRMContext';
 
 import NavbarPublica from './componentes/NavbarPublica';
 import Slider from './componentes/Slider/Slider.jsx';
@@ -10,11 +10,10 @@ import Productos from './componentes/Productos/Productos';
 
 const Pagina = () => {
 
-    const [auth, guardarAuth] = useContext(CRMContext)
 
 
     return ( 
-        <CRMProvider value={[auth,guardarAuth]} >
+        <React.Fragment>
             <NavbarPublica/>
             <div className="contenedor-slider-general">
                 <Slider/>
@@ -22,7 +21,7 @@ const Pagina = () => {
             <Productos/>
             <Usados/>
             <Footer/>
-        </CRMProvider>
+        </React.Fragment>
      );
 }
  
