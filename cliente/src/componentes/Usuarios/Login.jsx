@@ -56,6 +56,7 @@ const Login = (props) => {
 
     return ( 
         <div className="login">
+            <p>Ingresa con el usuario prueba@prueba.com / contraseña: 123</p>
             <p>Inicio Sesión Administrador</p>
             <input type="text" className="campo-login" placeholder="Email" name="email" required onChange={leerDatos}/>
             <input type="text" className="campo-login" placeholder="Password" name="dni" required onChange={leerDatos}/>

@@ -18,6 +18,7 @@ const Pagina = () => {
             <div className="presentacion">
                 <p>Bienvenidos a este ejemplo de Landing page Autoadministrable</p>
                 <p>Front: React - Back: Node - DB: MongoDB</p>
+                <p>/admin para ingresar al Panel de administrador</p>
             </div>
             <div className="contenedor-slider-general">
                 <Slider/>
