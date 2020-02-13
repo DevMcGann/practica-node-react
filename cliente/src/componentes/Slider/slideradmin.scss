@@ -11,16 +11,19 @@ h1{
 }
 
 .galeria-slider{
-    max-height: 800px;
-    max-width: 100%;
+    height: 300px;
+    width: 80%;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     grid-template-rows: auto;
     grid-gap: 5px;
-    padding:10px;
-}
+    padding:45px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    background: black;
+    }
 
 .galeria-slider img{
-    height: 450px;
-    min-width: 450px;
+    height: 250px;
+    min-width: 250px;
 }

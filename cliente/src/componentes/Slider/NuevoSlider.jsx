@@ -62,17 +62,17 @@ const NuevoSlider = () => {
 
                 <div className="campo">
                     <label>Titulo Slider</label>
-                    <input type="text" placeholder="Titulo" name="titulo" onChange={handleChange}/>
+                    <input type="text" placeholder="Titulo" name="titulo" required  onChange={handleChange}/>
                 </div>
 
                 <div className="campo">
                     <label>Descripción</label>
-                    <input type="text" placeholder="desc" name="desc" onChange={handleChange}/>
+                    <input type="text" placeholder="desc" name="desc" required onChange={handleChange}/>
                 </div>
 
                 <div className="campo">
                     <label className="label-imagen">Imagen</label>
-                    <input type="file"  name="imagen" onChange={leerArchivo}/>
+                    <input type="file"  name="imagen" required onChange={leerArchivo}/>
                 </div>
 
                 <input type="submit" className="boton" value="Agregar Slider"/>

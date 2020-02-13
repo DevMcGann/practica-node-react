@@ -47,9 +47,7 @@ const SliderItem = ({slider}) => {
                 <h1 id="titulo-slider"><span>{titulo}</span></h1>
                 <h2 id="desc-slider"><span>{desc}</span></h2>
                 
-            
-        </article>
-        {auth.auth?
+                {auth.auth?
                 <button
                     id="eliminar"
                     type="button" 
@@ -58,6 +56,8 @@ const SliderItem = ({slider}) => {
                     
                 </button>
         : null}
+        </article>
+   
         </React.Fragment>
                 
      );

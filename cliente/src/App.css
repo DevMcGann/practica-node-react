@@ -115,6 +115,10 @@ a{
   font-weight: bolder;
 }
 
+#cerrar-sesion{
+  color:white;
+}
+
 /*  Formulario  */
 .nuevo{
   background-color: coral;

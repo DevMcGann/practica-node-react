@@ -52,7 +52,8 @@ const Usado = ({usado}) => {
                 <p>$ {precio}</p>
                 {auth.auth?
                 <button 
-                    type="button" 
+                    type="button"
+                    id="eliminar_boton" 
                     onClick={() => eliminarUsado(_id) }>
                     Eliminar
                 </button>
