@@ -3,6 +3,7 @@ import clienteAxios from '../../axios';
 import NuevoSlider from './NuevoSlider';
 import SliderItem from './SliderItem.jsx';
 import './slideradmin.scss'
+import Forbidden from '../Forbidden.js'
 import {CRMContext} from '../../CRMContext'
 
 
@@ -25,7 +26,7 @@ const SliderAdmin = () => {
     },[slider])
 
 
-    if(!auth.auth) return null;
+    if(!auth.auth) return <Forbidden/>;
 
     return (
         <React.Fragment>

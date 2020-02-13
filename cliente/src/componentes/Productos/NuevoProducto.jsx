@@ -66,22 +66,22 @@ const NuevoProducto = () => {
 
                 <div className="campo">
                     <label>Nombre Producto</label>
-                    <input type="text" placeholder="Nombre del Producto" name="nombre" onChange={handleChange}/>
+                    <input type="text" placeholder="Nombre del Producto" name="nombre" required onChange={handleChange}/>
                 </div>
 
                 <div className="campo">
                     <label>Precio</label>
-                    <input type="text" placeholder="Precio" name="precio" onChange={handleChange}/>
+                    <input type="text" placeholder="Precio" name="precio" required onChange={handleChange}/>
                 </div>
 
                 <div className="campo">
                     <label>Descripción</label>
-                    <input type="text" placeholder="desc" name="desc" onChange={handleChange}/>
+                    <input type="text" placeholder="desc" name="desc" required onChange={handleChange}/>
                 </div>
 
-                <div className="campo">
+                <div className="campo campo-imagen">
                     <label>Imagen (Es recomendable subir imágenes del mismo tamaño)</label>
-                    <input type="file"  name="imagen" onChange={leerArchivo}/>
+                    <input type="file"  name="imagen" onChange={leerArchivo} required/>
                 </div>
 
                 <input type="submit" className="boton" value="Agregar Producto"/>

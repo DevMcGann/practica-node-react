@@ -55,9 +55,13 @@
 
 #eliminar{
     z-index: 999;
-    margin-top: 0px;
+    position: absolute;
+    margin-top: 50px;
     margin-bottom: 20px;
     padding: 25px;
+    background-color: red;
+    color:white;
+    border-radius: 50%;
     &:hover{
         cursor: pointer;
     }
@@ -66,5 +70,15 @@
  @media (max-width:700px){
     #desc-slider span{
         font-size: 1rem;
+    }
+
+    #slider-container{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-auto-rows: auto;
+
+        #imagen{
+            height: 50px; width: 50px;
+        }
     }
  }
