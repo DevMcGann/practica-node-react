@@ -1,7 +1,7 @@
 import React,{useState, useContext} from 'react'
 import clienteAxios from '../../axios'
 import {CRMContext} from '../../CRMContext'
-
+import Forbiden from '../Forbidden.js'
 
 const NuevoProducto = () => {
 
@@ -55,7 +55,7 @@ const NuevoProducto = () => {
 
     
   if(!auth.auth && (localStorage.getItem('token') === auth.token ) ) {
-        return null
+        return <Forbiden/>
     }
 
     return ( 

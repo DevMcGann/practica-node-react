@@ -1,8 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import clienteAxios from '../../axios'
 import {Link} from 'react-router-dom'
+import Forbidden from '../Forbidden.js'
+import {CRMContext} from '../../CRMContext'
+
 
 const NuevoUsado = () => {
+
+    const[auth, guardarAuth] = useContext(CRMContext);
 
     const[usado, setUsado]=useState({
         nombre:'',
@@ -49,6 +54,7 @@ const NuevoUsado = () => {
     }
 
 
+    if(!auth.auth) return <Forbidden/>;
 
 
     return ( 

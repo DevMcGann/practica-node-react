@@ -1,6 +1,7 @@
 import React,{useState,useContext} from 'react'
 import clienteAxios from '../../axios'
 import {CRMContext} from '../../CRMContext'
+import Forbidden from '../Forbidden.js'
 
 const NuevoSlider = () => {
 
@@ -49,7 +50,7 @@ const NuevoSlider = () => {
 
 
 
-    if(!auth.auth) return null;
+    if(!auth.auth) return <Forbidden/>;
 
 
     return ( 

@@ -35,6 +35,7 @@ const UsuarioNuevo = () => {
         <div className="usuario-nuevo">
             <h1>Nuevo Admin</h1>
             <p>Prueba: prueba@prueba.com  123</p>
+            <p>ESTE FORMULARIO VA A ESTAR PROTEGIDO!</p>
             <form  className="nuevo-usuario" onSubmit={Submit}>
                 <input type="text" placeholder="Email" name="email" onChange={handleChange}/>
                 <input type="text" placeholder="DNI sin puntos ni espacios" name="dni" onChange={handleChange}/>
