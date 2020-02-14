@@ -33,12 +33,12 @@ router.post('/admin', usuariosController.autenticarUsuario);
 //slider
 router.get('/slider', sliderController.mostrarSliders);
 router.post('/slider',sliderController.subirArchivo,sliderController.nuevoSlider);
-router.delete('/slider/:idSlider',auth, sliderController.eliminarSlider);
+router.delete('/slider/:idSlider', sliderController.eliminarSlider);
 
 //usados
 router.get('/usados', usadosController.mostrarUsados);
 router.post('/usados',usadosController.subirArchivo,usadosController.nuevoUsado);
-router.delete('/usados/:idUsado',auth, usadosController.eliminarUsado);
+router.delete('/usados/:idUsado', usadosController.eliminarUsado);
 
 return router;
 

@@ -64,8 +64,8 @@ exports.mostrarUsados = async (req,res,next) => {
 
 exports.eliminarUsado = async (req,res,next) => {
     try {
-         const producto = await Productos.findById({_id:req.params.idProducto})
-        fs.unlink(__dirname + '../../uploads/' + producto.imagen, function (err) {
+         const producto = await Usados.findById({_id:req.params.idUsado})
+        fs.unlink(__dirname + '../../uploads/usados/' + producto.imagen, function (err) {
         if (err) throw err;
         // if no error, file has been deleted successfully
         console.log('File deleted!');

@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; justify-content: center;
+    width: 100%;
 
     .titulo-usados{
         margin-top: 50px;
@@ -11,7 +12,7 @@
         font-weight: bolder;
         background-color: green;
         height: 100px;
-        width: 80%;
+        width: 100%;
         text-align: center;
         display: flex;
         justify-content: center; align-items: center;
@@ -23,6 +24,7 @@
 .lista-productos-usados{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 18px;
     align-items: center;justify-content: center;
 }
@@ -32,7 +34,7 @@
 .producto-usado-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 1fr;
+    grid-template-rows: 300px 1fr;
 
 
     .imagen-usado{
